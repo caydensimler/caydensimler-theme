@@ -1,0 +1,29 @@
+.section_header {
+	text-align: center;
+}
+
+/* About Me Section */
+	.interest_single {
+		text-align: center;
+	}
+
+	.interest_single > .interest_single_header > h1 {
+		margin: 0px;
+	}
+
+	.interest_text {
+		color: gray;
+	}
+
+	.interest_single_header {
+		padding: 10px 0px 3px 0px;
+		margin-bottom: 10px;
+
+		background: #0e6b93;
+		background: -moz-linear-gradient(top, #0e6b93 0%, black 65%, black 5%, #0e6b93 75%);
+		background: -webkit-linear-gradient(top, #0e6b93 0%,black 65%,black 5%,#0e6b93 75%);
+		background: linear-gradient(to bottom, #0e6b93 0%,black 65%,black 5%,#0e6b93 75%);
+
+		color: white;
+		border-radius: 10px;
+	}

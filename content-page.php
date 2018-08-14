@@ -49,6 +49,51 @@ if ( ! defined( 'ABSPATH' ) ) {
 				'after'  => '</div>',
 			) );
 			?>
+
+			<div class="section_content">
+
+				<!-- About Me/Interests -->
+				<h1 class="section_header" id="about">
+					<?php the_field( 'interest_header' ); ?>
+					<hr>
+				</h1>
+
+				<?php if ( have_rows( 'interest_single' ) ) : ?>
+					<?php while ( have_rows( 'interest_single' ) ) : the_row(); ?>
+						<div class="col-xs-12 col-md-6 col-lg-4 interest_single">
+							<div class="interest_single_header">
+								<h1>
+									<span class="interest_icon"><?php the_sub_field( 'interest_single_icon' ); ?></span>
+								</h1>
+								<h2><?php the_sub_field( 'interest_single_header' ); ?></h2>
+							</div>
+
+							<p class="interest_text"><?php the_sub_field( 'interest_single_text' ); ?></p>
+						</div>
+					<?php endwhile; ?>
+				<?php else : ?>
+					<?php // no rows found ?>
+				<?php endif; ?>
+
+				<!-- Portfolio -->
+				<?php
+					// Get the 'Profiles' post type
+					$args = array(
+					    'post_type' => 'projects',
+					);
+					$loop = new WP_Query($args);
+
+					while($loop->have_posts()): $loop->the_post();
+
+					the_title();
+					the_category();
+					echo '<img src="' . get_the_post_thumbnail_url() . '">';
+					echo '<br>';
+
+					endwhile;
+					wp_reset_query();
+				?>
+
 		</div><!-- .entry-content -->
 
 		<?php

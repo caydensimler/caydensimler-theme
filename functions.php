@@ -92,3 +92,12 @@ require get_template_directory() . '/inc/structure/header.php';
 require get_template_directory() . '/inc/structure/navigation.php';
 require get_template_directory() . '/inc/structure/post-meta.php';
 require get_template_directory() . '/inc/structure/sidebars.php';
+
+// Load Custom CSS
+wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css' );
+
+// wp_register_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+// wp_enqueue_style('bootstrap');
+
+// wp_register_script( 'bootstrapJS', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', null, null, true );
+// wp_enqueue_script('bootstrapJS');
