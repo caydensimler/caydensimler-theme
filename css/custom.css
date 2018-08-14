@@ -18,11 +18,14 @@
 	.interest_single_header {
 		padding: 10px 0px 3px 0px;
 		margin-bottom: 10px;
+		background-repeat: no-repeat;
+		background-position: left;
+		background-size: cover !important;
 
-		background: #0e6b93;
+		/*background: #0e6b93;
 		background: -moz-linear-gradient(top, #0e6b93 0%, black 65%, black 5%, #0e6b93 75%);
 		background: -webkit-linear-gradient(top, #0e6b93 0%,black 65%,black 5%,#0e6b93 75%);
-		background: linear-gradient(to bottom, #0e6b93 0%,black 65%,black 5%,#0e6b93 75%);
+		background: linear-gradient(to bottom, #0e6b93 0%,black 65%,black 5%,#0e6b93 75%);*/
 
 		color: white;
 		border-radius: 10px;

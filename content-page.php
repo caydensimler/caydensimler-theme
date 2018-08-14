@@ -61,7 +61,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php if ( have_rows( 'interest_single' ) ) : ?>
 					<?php while ( have_rows( 'interest_single' ) ) : the_row(); ?>
 						<div class="col-xs-12 col-md-6 col-lg-4 interest_single">
-							<div class="interest_single_header">
+							<!-- <div class="interest_single_header" style="background-image: url(<?php the_sub_field( 'interest_single_background_image' ); ?>"> -->
+							<div class="interest_single_header" style="background:linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<?php the_sub_field( 'interest_single_background_image' ); ?>);">
 								<h1>
 									<span class="interest_icon"><?php the_sub_field( 'interest_single_icon' ); ?></span>
 								</h1>
@@ -78,20 +79,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!-- Portfolio -->
 				<?php
 					// Get the 'Profiles' post type
-					$args = array(
-					    'post_type' => 'projects',
-					);
-					$loop = new WP_Query($args);
+					// $args = array(
+					//     'post_type' => 'projects',
+					// );
+					// $loop = new WP_Query($args);
 
-					while($loop->have_posts()): $loop->the_post();
+					// while($loop->have_posts()): $loop->the_post();
 
-					the_title();
-					the_category();
-					echo '<img src="' . get_the_post_thumbnail_url() . '">';
-					echo '<br>';
+					// the_title();
+					// the_category();
+					// echo '<img src="' . get_the_post_thumbnail_url() . '">';
+					// echo '<br>';
 
-					endwhile;
-					wp_reset_query();
+					// endwhile;
+					// wp_reset_query();
 				?>
 
 		</div><!-- .entry-content -->
