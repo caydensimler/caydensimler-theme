@@ -96,6 +96,16 @@ require get_template_directory() . '/inc/structure/sidebars.php';
 // Load Custom CSS
 wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css' );
 
+function custom_post_type_cat_filter($query) {
+  if ( !is_admin() && $query->is_main_query() ) {
+    if ($query->is_category()) {
+      $query->set( 'post_type', array( 'post', 'projects' ) );
+    }
+  }
+}
+
+add_action('pre_get_posts','custom_post_type_cat_filter');
+
 // wp_register_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
 // wp_enqueue_style('bootstrap');
 
