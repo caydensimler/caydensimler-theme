@@ -28,5 +28,10 @@
 		background: linear-gradient(to bottom, #0e6b93 0%,black 65%,black 5%,#0e6b93 75%);*/
 
 		color: white;
-		border-radius: 10px;
+		border-radius: 3px;
+	}
+
+/* Portfolio Section */
+	.project_single {
+		border: 1px solid lightgray;
 	}
